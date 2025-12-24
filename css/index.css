@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
 body {
     background: #0f172a;
     color: #e2e8f0;
@@ -6,6 +7,40 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 40px 15%;
+}
+
+nav {
+    background-color: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(5px);
+    border: solid #334155 1px;
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 20px 30px;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 10px 20px;
 }
 
 h1 {
@@ -16,10 +51,12 @@ h1 {
 }
 
 h2 {
+    display: flex;
+    justify-content: center;
     color: #38bdf8;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     border-bottom: solid #334155 2px;
     padding-bottom: 10px;
@@ -30,12 +67,12 @@ section {
     margin-bottom: 40px;
 }
 
-#Experience ul {
+#experience ul {
     list-style: none;
     padding: 0;
 }
 
-#Experience li {
+#experience li {
     background: #1e293b;
     border: solid #334155 1px;
     border-radius: 30px;
@@ -43,15 +80,41 @@ section {
     margin-bottom: 20px;
 }
 
-#Connect ul {
-    list-style: none;
-    padding: 0;
+.job-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-#Connect li {
+.job-title {
+    margin: 0;
+    font-size: 20px;
+    color: #e2e8f0;
+}
+
+.job-date {
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+.job-description {
+    margin: 0;
+}
+
+#connect ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#connect li {
     margin-bottom: 20px;
 }
 .link-icon {
-    width: 125px;
+    width: 100px;
     height: auto;
 }
