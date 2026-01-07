@@ -1,120 +1,258 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
+/* =======================
+    Global / Mobile-First
+========================== */
 body {
     background: #0f172a;
+    background-image: radial-gradient(circle at top left, rgba(56, 189, 248, 0.1), transparent 40%), radial-gradient(circle at bottom right, rgba(192, 132, 252, 0.1), transparent 40%);
+    background-attachment: fixed;
     color: #e2e8f0;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
+    padding: 1em 5%;
     margin: 0;
-    padding: 40px 15%;
-}
-
-nav {
-    background-color: rgba(30, 41, 59, 0.7);
-    backdrop-filter: blur(5px);
-    border: solid #334155 1px;
-    border-radius: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 20px 30px;
-    max-width: fit-content;
-    margin: 0 auto;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    list-style: none;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 10px 20px;
 }
 
 h1 {
-    font-size: 48px;
-    font-weight: bolder;
+    font-size: 3rem;
+    font-weight: 700;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 1em;
 }
 
 h2 {
     display: flex;
     justify-content: center;
-    color: #38bdf8;
+    color: #e2e8f0;
+    border-bottom: solid 3px;
+    border-image: linear-gradient(to right, #38bdf8, #c084fc) 1;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 25px;
-    font-weight: bold;
-    border-bottom: solid #334155 2px;
-    padding-bottom: 10px;
-    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-bottom: .5em;
+    margin-top: 1em;
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 2.5em;
+    scroll-margin-top: 1em;
 }
 
-#experience ul {
+/* =======================
+    Layout
+========================== */
+
+nav {
+    background-color: rgba(56, 189, 248, .08);
+    backdrop-filter: blur(10px);
+    border: solid rgba(255, 255, 255, .2) 1px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 100%;
+    padding: .5em;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-#experience li {
-    background: #1e293b;
-    border: solid #334155 1px;
-    border-radius: 30px;
-    padding: 20px;
-    margin-bottom: 20px;
+/* =======================
+    Components
+========================== */
+
+nav a {
+    display: inline-flex;
+    width: 100%;
+    color: #ffffff;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(255, 255, 255, .03);
+    border: solid rgba(255, 255, 255, .15) 1px;
+    border-radius: 20px;
+    padding: 1em 0;
+    margin: .3em 0;
+    transition: all .3s ease;
+}
+
+nav a:hover {
+    color: #c084fc;
+    background-color: rgba(192, 132, 252, .1);
+    border-color: rgba(192, 132, 252, .3);
 }
 
 .job-details {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: .6em;
+    flex-wrap: wrap;
 }
 
 .job-title {
-    margin: 0;
-    font-size: 20px;
-    color: #e2e8f0;
+    color: #f1f5f9;
+    font-weight: 600;
+    font-size: 1.3rem;
+    border-bottom: solid 1px;
+    border-image: linear-gradient(to right, #38bdf8, #c084fc) 1;
 }
 
 .job-date {
-    color: #94a3b8;
-    font-size: 15px;
+    background: rgba(56, 189, 248, .1);
+    border: solid rgba(56, 189, 248, .2) 1px;
+    border-radius: 12px;
+    color: #38bdf8;
+    font-size: .9rem;
+    padding: .4em .8em;
 }
 
-.job-description {
-    margin: 0;
+.link-icon {
+    border: solid rgba(255, 255, 255, .2) 1px;
+    border-radius: 20px;
+    width: 7em;
+    height: auto;
+    padding: 1em;
+    margin: 1em;
+    transition: all .3s ease;
+}
+
+.link-icon:hover {
+    background-color: rgba(56, 189, 248, .1);
+    border-color: rgba(56, 189, 248, .2);
+    transform: scale(1.1);
+}
+
+#experience ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#experience li {
+    background: rgba(30, 41, 59, .5);
+    border: solid rgba(192, 132, 252, .5) 1px;
+    border-radius: 20px;
+    padding: 1.2em;
 }
 
 #connect ul {
     display: flex;
-    gap: 20px;
     list-style: none;
-    padding: 0;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    padding: 0;
 }
 
 #connect li {
-    margin-bottom: 20px;
+    margin-bottom: 1em;
 }
-.link-icon {
-    width: 100px;
-    height: auto;
+
+/* =======================
+    Media Query
+========================== */
+
+/* ======= Tablet ======= */
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 4rem;
+        margin-bottom: .5em;
+    }
+    
+    nav {
+        width: 95%;
+        padding: .5em 1em;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav a {
+        width: auto;
+        padding: .7em 1.5em;
+        font-size: 1rem;
+    }
+    
+    #experience li {
+        padding: 2em;
+    }
+}
+
+/* ======= Desktop ======= */
+
+@media (min-width: 1024px) {
+    body {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    h2 {
+        font-size: 2rem;
+        justify-content: flex-start;
+        margin-bottom: 1em;
+    }
+    
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        width: auto;
+        padding: 1em 2em;
+    }
+
+    section {
+        scroll-margin-top: 6em;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav a {
+        width: auto;
+        border-radius: 20px;
+        padding: .75em 2.5em;
+        margin: 0;
+    }
+    
+    nav a:hover {
+        background-color: rgba(192, 132, 252, .1);
+        border-color: rgba(192, 132, 252, .3);
+        color: #c084fc;
+        transform: translateY(-2px);
+    }
+
+    .link-icon {
+        width: 11em;
+        height: auto;
+        margin: 1em 2em;
+    }
+    
+    .link-icon:hover {
+        transform: scale(1.1);
+    }
+    
+    #experience ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
 }
