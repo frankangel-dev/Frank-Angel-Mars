@@ -9,8 +9,9 @@ body {
     background-attachment: fixed;
     color: #e2e8f0;
     font-family: 'Inter', sans-serif;
+    font-size: 16px;
     line-height: 1.6;
-    padding: 1em 5%;
+    padding: 0 5%;
     margin: 0;
 }
 
@@ -70,6 +71,7 @@ nav ul {
 nav a {
     display: inline-flex;
     width: 100%;
+    box-sizing: border-box;
     color: #ffffff;
     justify-content: center;
     text-decoration: none;
@@ -134,16 +136,33 @@ nav a:hover {
 
 #experience ul {
     list-style: none;
-    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 0;
 }
 
 #experience li {
     background: rgba(30, 41, 59, .5);
     border: solid rgba(192, 132, 252, .5) 1px;
     border-radius: 20px;
+    padding: 1.2em;
+}
+
+#skills ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: 10px;
+    text-align: center;
+    padding: 0;
+}
+
+#skills li {
+    background: rgba(30, 41, 59, .5);
+    border: solid rgba(192, 132, 252, .5) 1px;
+    border-radius: 20px;
+    font-weight: 500;
     padding: 1.2em;
 }
 
@@ -181,7 +200,7 @@ nav a:hover {
         flex-direction: row;
         justify-content: space-around;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 5px;
     }
 
     nav a {
