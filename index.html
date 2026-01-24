@@ -6,6 +6,7 @@
         <meta name="description" content="Frank Angel's Portfolio">
         <meta name="author" content="Frank Angel">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap">
         <link rel="stylesheet" href="css/index.css">
     </head>
 
@@ -18,6 +19,7 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#leave-message">Leave Message</a></li>
                 <li><a href="#connect">Connect</a></li>
             </ul>
         </nav>
@@ -78,6 +80,32 @@
 
         <section id="projects">
             <h2>Projects</h2>
+            <ul>
+
+            </ul>
+        </section>
+
+        <section id="leave-message">
+            <h2>Leave a Message</h2>
+            <form class="form-flex" name="leave_message">
+                <div class="input-flex">
+                    <label for="name">Name:</label>
+                    <input id="name" type="text" name="usersName" required>
+                </div>
+                <div class="input-flex">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" name="usersEmail" required>
+                </div>
+                <div class="input-flex">
+                    <label for="message-area">Message:</label>
+                    <textarea id="message-area" name="usersMessage" required></textarea>
+                </div>
+                <button class="btn-submit" type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="messages">
+            <h2>Messages</h2>
             <ul>
 
             </ul>
