@@ -1,3 +1,4 @@
+// Footer
 const body = document.body;
 const footer = document.createElement('footer');
 const copyright = document.createElement('p');
@@ -111,3 +112,54 @@ messageForm.addEventListener('submit', e => {
     
     e.target.reset();
 });
+
+// Fetch
+async function loadGitHubRepos() {
+    try {
+        const response = await fetch('https://api.github.com/users/frankangel-dev/repos');
+
+        if (!response.ok) {
+            handleRepoError(new Error(`Failed to fetch GitHub repositories: ${response.status}`));
+            return;
+        }
+
+        const repositories = await response.json();
+        console.log(repositories);
+
+        populateProjects(repositories);
+    } catch (error) {
+        console.error(error);
+        handleRepoError(error);
+    }
+}
+
+function handleRepoError(error) {
+    console.error(error);
+    const projectSection = document.getElementById('projects');
+
+    if (projectSection) {
+        const errorMsg = document.createElement('p');
+        errorMsg.textContent = 'Unable To Load GitHub Repositories. Please Try Again Later.';
+
+        projectSection.appendChild(errorMsg);
+    }
+}
+
+function populateProjects(repositories) {
+    const projectSection = document.getElementById('projects');
+
+    if (projectSection) {
+        const projectList = projectSection.querySelector('ul');
+    
+        if (projectList) {
+            for (const repo of repositories) {
+                const project = document.createElement('li');
+                project.textContent = repo.name;
+                
+                projectList.appendChild(project);
+            }
+        }
+    }
+}
+
+loadGitHubRepos();
