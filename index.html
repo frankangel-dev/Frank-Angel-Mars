@@ -11,121 +11,138 @@
     </head>
 
     <body>
-        <h1>Frank Angel</h1>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="main-nav">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="menu-text">MENU</span>
+        </button>
 
-        <nav>
+        <button id="theme-toggle" class="theme-btn" aria-label="Switch to light mode">☀️</button>
+
+        <header>
+            <h1>Frank Angel</h1>
+        </header>
+
+        <nav id="main-nav">
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#leave-message">Leave Message</a></li>
+                <li><a href="#leave-message">Message</a></li>
                 <li><a href="#connect">Connect</a></li>
             </ul>
         </nav>
 
-        <section id="about">
-            <h2>About</h2>
-            <p>Hi, I’m Frank. I’m currently practicing and enjoying JavaScript, and I’ve been having fun bringing small projects and ideas to life as I learn new concepts.
-                I have a B.S. in Software Engineering, but I still consider myself early in my coding journey.
-                I love problem-solving and understanding how things work. I joined Code the Dream to strengthen my foundations,
-                learn best practices, and grow confidently in my skills alongside a supportive community. My goal is to keep improving, challenge myself with each project,
-                and ultimately become a confident software engineer and build a meaningful career in tech.
-            </p>
-        </section>
+        <main>
+            <section id="about">
+                <h2>About</h2>
+                <p>Hi, I’m Frank. I’m currently practicing and enjoying JavaScript, and I’ve been having fun bringing small projects and ideas to life as I learn new concepts.
+                    I have a B.S. in Software Engineering, but I still consider myself early in my coding journey.
+                    I love problem-solving and understanding how things work. I joined Code the Dream to strengthen my foundations,
+                    learn best practices, and grow confidently in my skills alongside a supportive community. My goal is to keep improving, challenge myself with each project,
+                    and ultimately become a confident software engineer and build a meaningful career in tech.
+                </p>
+            </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li class="job-item">
-                    <div class="job-details">
-                        <h3 class="job-title">Software Engineering Student</h3>
-                        <span class="job-date">2023 - 2025</span>
+            <section id="experience">
+                <h2>Experience</h2>
+                <ul>
+                    <li class="job-item">
+                        <div class="job-details">
+                            <h3 class="job-title">Software Engineering Student</h3>
+                            <span class="job-date">2023 - 2025</span>
+                        </div>
+                        <p class="job-description">
+                            Completed and obtained a B.S in Software Engineering, focusing on the
+                            design, development, and implementation of scalable software solutions.
+                            Developed technical proficiency in C#, Python, JavaScript, and SQL through hands-on
+                            projects and rigorous assessments. Key areas of focus include:
+                            <br><br>
+                            <strong>Full-Stack Development:</strong> Designing and deploying secure web and mobile applications using C# and modern frameworks.
+                            <br>
+                            <strong>Data Management:</strong> Architecting relational databases, performing complex SQL queries, and managing data lifecycles.
+                            <br>
+                            <strong>Cloud & Infrastructure:</strong> Gaining foundational knowledge in AWS cloud environments (Git) to support collaborative, scalable workflows.
+                            <br>
+                            <strong>QA & Security:</strong> Applying Quality Assurance (QA) testing strategies and security protocols to identify and mitigate software vulnerabilities.
+                            <br>
+                            <strong>UI/UX Design:</strong> Creating user-centered interfaces through wireframing, prototyping, and usability testing.
+                            <br><br>
+                            The degree culminates in a capstone project focused on designing, developing, testing, and documenting scalable software solutions.
+                        </p>
+                    </li>
+                    <li class="job-item">
+                        <div class="job-details">
+                            <h3 class="job-title">Code the Dream Student</h3>
+                            <span class="job-date">2025 - Present</span>
+                        </div>
+                        <p class="job-description">Learning modern web development practices, focusing on JavaScript, HTML, and CSS.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul></ul>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul></ul>
+            </section>
+
+            <section id="leave-message">
+                <h2>Leave a Message</h2>
+
+                <form class="form-flex" name="leave_message">
+                    <div class="input-flex">
+                        <label for="name">Name:</label>
+                        <input id="name" type="text" name="usersName" required>
                     </div>
-                    <p class="job-description">
-                        Completed and obtained a B.S in Software Engineering, focusing on the
-                        design, development, and implementation of scalable software solutions.
-                        Developed technical proficiency in C#, Python, JavaScript, and SQL through hands-on
-                        projects and rigorous assessments. Key areas of focus include:
-                        <br><br>
-                        <strong>Full-Stack Development:</strong> Designing and deploying secure web and mobile applications using C# and modern frameworks.
-                        <br>
-                        <strong>Data Management:</strong> Architecting relational databases, performing complex SQL queries, and managing data lifecycles.
-                        <br>
-                        <strong>Cloud & Infrastructure:</strong> Gaining foundational knowledge in AWS cloud environments (Git) to support collaborative, scalable workflows.
-                        <br>
-                        <strong>QA & Security:</strong> Applying Quality Assurance (QA) testing strategies and security protocols to identify and mitigate software vulnerabilities.
-                        <br>
-                        <strong>UI/UX Design:</strong> Creating user-centered interfaces through wireframing, prototyping, and usability testing.
-                        <br><br>
-                        The degree culminates in a capstone project focused on designing, developing, testing, and documenting scalable software solutions.
-                    </p>
-                </li>
-                <li class="job-item">
-                    <div class="job-details">
-                        <h3 class="job-title">Code the Dream Student</h3>
-                        <span class="job-date">2025 - Present</span>
+
+                    <div class="input-flex">
+                        <label for="email">Email:</label>
+                        <input id="email" type="email" name="usersEmail" required>
+                        <span id="email-error" class="error-msg"></span>
                     </div>
-                    <p class="job-description">Learning modern web development practices, focusing on JavaScript, HTML, and CSS.</p>
-                </li>
-            </ul>
-        </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
+                    <div class="input-flex">
+                        <label for="message-area">Message:</label>
+                        <textarea id="message-area" name="usersMessage" required></textarea>
+                    </div>
 
-            </ul>
-        </section>
+                    <button class="btn-submit" type="submit">Submit</button>
+                </form>
+            </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
+            <section id="messages">
+                <h2>Messages</h2>
+                <ul></ul>
+            </section>
 
-            </ul>
-        </section>
-
-        <section id="leave-message">
-            <h2>Leave a Message</h2>
-            <form class="form-flex" name="leave_message">
-                <div class="input-flex">
-                    <label for="name">Name:</label>
-                    <input id="name" type="text" name="usersName" required>
-                </div>
-                <div class="input-flex">
-                    <label for="email">Email:</label>
-                    <input id="email" type="email" name="usersEmail" required>
-                </div>
-                <div class="input-flex">
-                    <label for="message-area">Message:</label>
-                    <textarea id="message-area" name="usersMessage" required></textarea>
-                </div>
-                <button class="btn-submit" type="submit">Submit</button>
-            </form>
-        </section>
-
-        <section id="messages">
-            <h2>Messages</h2>
-            <ul>
-
-            </ul>
-        </section>
-
-        <section id="connect">
-            <h2>Connect</h2>
-            <ul>
-                <li>
-                    <a href="https://github.com/frankangel-dev" target="_blank" rel="noopener noreferrer" aria-label="Visit Frank Angel's GitHub profile">
-                        <img src="img/GitHub/GitHub_Lockup_Light.svg" alt="" class="link-icon">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/frank-angel/" target="_blank" rel="noopener noreferrer" aria-label="Visit Frank Angel's LinkedIn profile">
-                        <img src="img/Linkedin/LI-Logo.png" alt="" class="link-icon">
-                    </a>
-                </li>
-            </ul>
-        </section>
+            <section id="connect">
+                <h2>Connect</h2>
+                <ul>
+                    <li>
+                        <a href="mailto:frankangel89@gmail.com" aria-label="Email Frank Angel">
+                            <img src="img/Mail/envelope-solid.svg" alt="Email" class="link-icon icon-email">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/frankangel-dev" target="_blank" rel="noopener noreferrer" aria-label="Visit Frank Angel's GitHub profile">
+                            <img src="img/GitHub/GitHub_Lockup_Light.svg" alt="GitHub" class="link-icon icon-github">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/frank-angel/" target="_blank" rel="noopener noreferrer" aria-label="Visit Frank Angel's LinkedIn profile">
+                            <img src="img/Linkedin/LI-Logo.png" alt="LinkedIn" class="link-icon">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
 
         <script src="js/index.js"></script>
     </body>
